@@ -1,0 +1,20 @@
+<%- include('partials/header.ejs') %>
+
+
+<div class="shadow p-3 mb-5 bg-white rounded">
+
+    <% for (let algo of algorithms){ %>
+        <h1 class="<%= `header${algo.id}` %>"><%= algo.name %>
+        <button type="button" class="btn btn-outline-success" id="<%= `run${algo.id}` %>">Run</button>
+        </h1>
+        <section class="container">
+            <div class="<%= `data${algo.id}` %>"></div>
+            <h2 class=<%= `key${algo.id}` %>></h2>
+        </section>
+        <br>
+    <% } %>
+
+</div>
+
+
+<%- include('partials/footer.ejs') %>

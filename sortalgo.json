@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Selection Sort",
+        "id": "Select"
+    },
+    {
+        "name": "Bubble Sort",
+        "id": "Bubble"
+    },
+    {
+        "name": "Insertion Sort",
+        "id": "Insertion"
+    }
+]

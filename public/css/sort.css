@@ -1,0 +1,101 @@
+.container {
+    left: 20px;
+    margin: 0 auto;
+}
+  
+.dataSelect, .dataBubble, .dataInsertion, .dataMerge, .dataQuick {
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+}
+  
+.cellSelect, .cellBubble, .cellInsertion, .cellMerge, .cellQuick {
+    margin: 5px;
+    padding: 10px;
+    
+    background-color: #eee;
+    
+    color: #222;
+    border: 5px solid #eee;
+    border-radius: 5px;
+    position: relative;
+    transition: all .4s ease-in;
+}
+
+.cellSelect.referenced, .cellBubble.referenced, .cellInsertion.referenced, .cellMerge.referenced, .cellQuick.referenced {
+    background-color: blue;
+    border-color: blue;
+    color: white;
+    transition: all .4s ease-out;
+}
+
+.cellSelect.compared, .cellBubble.compared, .cellInsertion.compared, .cellMerge.compared, .cellQuick.compared {
+    border-color: orange;
+    background-color: orange;
+    color: white; 
+    transition: all .4s ease-out;
+}
+
+.cellSelect.done, .cellBubble.done, .cellInsertion.done, .cellMerge.done, .cellQuick.done {
+    border-color: green;
+    background-color: green;
+    color: white;
+    transition: .5s;
+}
+
+.cellSelect.m-right, .cellBubble.m-right, .cellInsertion.m-right, .cellMerge.m-right, .cellQuick.m-right {
+    animation-name: m-right;
+    animation-duration: 1s;
+}
+
+.cellSelect.m-left, .cellBubble.m-left, .cellInsertion.m-left, .cellMerge.m-left, .cellQuick.m-left {
+    animation-name: m-left;
+    animation-duration: 1s;
+}
+  
+@keyframes m-right {
+    0% {
+      left: 0%;
+    }
+    
+    33% {
+      left: 0;
+    }
+  
+    100% {
+      left: 90px;
+    }
+}
+  
+@keyframes m-left {
+    0% {
+      right: 0%;
+    }
+    
+    33% {
+      right: 0;
+    }
+  
+    100% {
+      right: 90px;
+    }
+}
+
+.keyInsertion{
+  display: flex;
+  position: relative;
+  margin: 0 auto;
+}
+
+#key{
+  margin: 5px;
+  padding: 10px;
+  
+  background-color: #eee;
+  
+  color: #222;
+  border: 5px solid red;
+  border-radius: 5px;
+  position: relative;
+  transition: all .4s ease-in;
+}
