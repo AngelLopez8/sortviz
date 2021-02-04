@@ -4,6 +4,7 @@ const path = require('path')
 const fs = require('fs')
 
 const app = express()
+const port = process.env.PORT || 3000
 
 app.use(express.static('public/'))
 app.use(express.urlencoded({ extended: true }))
@@ -19,8 +20,8 @@ app.get('/', (req, res) => {
     res.render('sortviz.ejs', { pageTitle: "Sorting Visualizer", algorithms} )
 })
 
-app.listen(3000, (req, res) => {
-    console.log("LISTENING ON PORT 3000!")
+app.listen(port, () => {
+    console.log("LISTENING ON PORT " + port)
 })
 
 //returns array of algorithm object
