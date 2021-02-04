@@ -23,6 +23,7 @@ app.listen(3000, (req, res) => {
     console.log("LISTENING ON PORT 3000!")
 })
 
+//returns array of algorithm object
 const loadAlgorithms = () => {
     try{
         const dataBuffer = fs.readFileSync('sortalgo.json')
