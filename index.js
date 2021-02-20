@@ -13,7 +13,7 @@ app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, '/views'))
 
 app.get('/', (req, res) => {
-    console.log("SORTING")
+    // console.log("SORTING")
 
     const algorithms = loadAlgorithms()
 
